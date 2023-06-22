@@ -1,0 +1,33 @@
+.area-breadcrumbs {
+  padding-inline: var(--spacing-small2, 0.5rem);
+  padding-block: var(--spacing-medium, 1rem);
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0;
+  gap: var(--spacing-small);
+  list-style: none;
+  background-color: transparent;
+}
+
+.crumb {
+  display: flex;
+  align-items: center;
+  /* padding: 0.5rem 0.75rem; */
+  line-height: 1.5;
+  color: var(--color-text-inactive);
+}
+
+.crumb:hover:not(.crumb-active) {
+  color: var(--color-text-link);
+}
+
+.crumb:not(.crumb-active)::after {
+  content: "/";
+  margin-left: 0.5rem;
+  color: #6c757d;
+  font-weight: normal;
+}

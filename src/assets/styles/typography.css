@@ -1,0 +1,158 @@
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+a.link,
+*.link {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a.link:hover,
+*.link:hover {
+  text-decoration: underline;
+  color: var(--color-primary);
+}
+
+.semibold {
+  font-weight: 500;
+}
+
+
+.link-secondary {
+  text-align: left;
+  color: var(--color-content-muted);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.link-secondary.active {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.link-secondary:hover {
+  text-decoration: underline;
+  /* color: var(--color-primary); */
+}
+
+
+.link-error:hover {
+  text-decoration: underline;
+  color: var(--color-error);
+}
+
+.link-error.active {
+  color: var(--color-error);
+  text-decoration: underline;
+}
+
+.text-muted {
+  color: var(--color-content-muted);
+}
+
+.text-small {
+  font-size: var(--font-size-small);
+  line-height: 1.5;
+}
+
+.text-success {
+  color: var(--color-success);
+}
+
+.text-info {
+  color: var(--color-info);
+}
+
+.text-warning {
+  color: var(--color-warning);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-primary-muted {
+  color: var(--color-primary);
+}
+
+.text-error {
+  color: var(--color-error);
+}
+
+
+
+.blockquote {
+  border-left: 4px solid var(--color-disabled);
+  -webkit-padding-start: var(--spacing-medium);
+          padding-inline-start: var(--spacing-medium);
+  margin-block: var(--spacing-medium);
+  margin-inline: var(--spacing-medium);
+  color: var(--color-content-muted);
+}
+
+p+p {
+  -webkit-margin-before: var(--spacing-medium);
+          margin-block-start: var(--spacing-medium);
+}
+
+.paragraph {
+  max-width: 50ch;
+}
+
+.header-1 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.25;
+  margin-block: var(--spacing-medium);
+}
+
+.header-2 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+  margin-block: var(--spacing-medium);
+}
+
+.header-3 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.25;
+  margin-block: var(--spacing-medium);
+}
+
+.header-4 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+  margin-block: var(--spacing-medium);
+  color: var(--color-content-inset);
+}
+
+.header-5 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 0.9;
+  margin-block: var(--spacing-medium);
+}
+
+.headline {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.25;
+  margin-block: var(--spacing-medium);
+}
+
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 90%;
+}

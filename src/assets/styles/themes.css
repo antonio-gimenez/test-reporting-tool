@@ -1,0 +1,302 @@
+  /* 
+  Syntax:
+  --{property-name}-{element}-{state}-{modifier}: {value};
+ */
+
+  html {
+    --spacing-tiny: 2px;
+    /* 0.125rem */
+    --spacing-small: 4px;
+    /* 0.25rem */
+    --spacing-medium: 8px;
+    /* 0.5rem */
+    --spacing-large: 16px;
+    /* 1rem */
+    --spacing-extra-large: 24px;
+    /* 1.5rem */
+
+    --rounded-small: 3px;
+    /* 0.25rem */
+    --rounded-medium: 6px;
+    /* 0.5rem */
+    --rounded-large: 12px;
+    /* 1rem */
+    --rounded-square: 0;
+    /* 0rem */
+    --rounded-circle: 50%;
+    /* 50% is a large enough number to make the element appear circular */
+    --rounded-pill: 9999px;
+    /* 9999px is a large enough number to make the element appear circular */
+    --border-width: 1px;
+    --border-width-inactive: 1px;
+  }
+
+  [data-theme="light"],
+  /* if html doesn't have a data-theme attribute, default to light theme */
+  html:not([data-theme]) {
+    color-scheme: light;
+
+    /* 
+  Syntax: 
+  {element}-{property}-{state}-{modifier}: {value};
+  {element}: background, text, border, backdrop, shadow
+  {property}: color, opacity, shadow
+  {state}: base, active, hover, selected, disabled, muted, transparent
+  {modifier}: muted, hover, active, selected, disabled, transparent
+  */
+
+    --color-base: hsl(220, 20%, 100%);
+    --color-inset: hsl(225, 20%, 98%);
+    --color-widget: hsl(225, 0%, 100%);
+    --color-inset-hover: hsl(225, 17%, 97%);
+    --color-subtle: hsl(220, 20%, 96%);
+    --color-muted: hsl(220, 20%, 95%);
+    --color-backdrop: hsla(0, 0%, 0%, 0.5);
+    --color-backdrop-muted: hsla(0, 0%, 0%, 0.2);
+    --color-disabled: hsl(220, 0%, 85%);
+
+    --color-neutral: hsl(220, 10%, 50%);
+    --color-content-neutral: hsl(220, 20%, 100%);
+
+    --color-content: hsl(208, 13%, 14%);
+    --color-content-inset: hsl(208, 13%, 24%);
+    --color-content-muted: hsl(215, 8%, 43%);
+    --color-content-subtle: hsl(213, 11%, 58%);
+    --color-content-disabled: hsl(215, 8%, 43%);
+    --color-content-success: hsl(220, 20%, 100%);
+    --color-content-warning: hsl(40, 100%, 10%);
+    --color-content-error: hsl(220, 20%, 100%);
+    --color-content-primary: hsl(220, 20%, 100%);
+    --color-content-info: hsl(220, 20%, 100%);
+
+    --color-border: hsl(210, 18%, 84%);
+    --color-border-inset: hsl(210, 18%, 90%);
+    --color-border-muted: hsla(210, 18%, 87%);
+    --color-border-subtle: hsla(210, 32%, 15%, 0.1);
+    --color-border-disabled: hsl(210, 10%, 75%);
+
+    --color-primary: hsl(220, 100%, 50%);
+    --color-primary-inset: hsl(220, 100%, 88%);
+    --color-primary-hover: hsl(220, 100%, 55%);
+    --color-primary-muted: hsla(220, 100%, 50%, 0.6);
+    --color-primary-subtle: hsla(220, 100%, 50%, 0.3);
+    --color-primary-semitransparent: hsla(220, 100%, 50%, 0.1);
+
+    --color-success: hsl(142, 71%, 35%);
+    --color-success-inset: hsl(142, 71%, 88%);
+    --color-success-hover: hsl(142, 71%, 40%);
+    --color-success-muted: hsla(142, 71%, 35%, 0.4);
+    --color-success-subtle: hsla(142, 71%, 35%, 0.1);
+
+    --color-warning: hsl(37, 90%, 51%);
+    --color-warning-inset: hsl(37, 90%, 88%);
+    --color-warning-hover: hsl(40, 100%, 50%);
+    --color-warning-muted: hsla(40, 68%, 46%, 0.65);
+    --color-warning-subtle: hsla(40, 68%, 46%, 0.2);
+
+    --color-error: hsl(0, 60%, 50%);
+    --color-error-inset: hsl(0, 60%, 38%);
+    --color-error-hover: hsl(3, 75%, 65%);
+    --color-error-muted: hsla(3, 75%, 60%, 0.4);
+    --color-error-subtle: hsla(3, 75%, 60%, 0.1);
+
+    --color-info: hsl(195, 50%, 50%);
+    --color-info-inset: hsl(195, 50%, 45%);
+    --color-info-hover: hsl(195, 50%, 55%);
+    --color-info-muted: hsla(195, 50%, 50%, 0.4);
+    --color-info-subtle: hsla(195, 50%, 50%, 0.2);
+
+    accent-color: var(--color-primary);
+  }
+
+  [data-theme="dark"] {
+    color-scheme: dark;
+    /* 
+  Syntax: 
+  {element}-{property}-{state}-{modifier}: {value};
+  {element}: background, text, border, backdrop, shadow
+  {property}: color, opacity, shadow
+  {state}: base, active, hover, selected, disabled, muted, transparent
+  {modifier}: muted, hover, active, selected, disabled, transparent
+  */
+
+    --color-base: hsl(200, 20%, 15%);
+    --color-inset: hsl(200, 20%, 13%);
+    --color-widget: hsl(200, 20%, 14%);
+    --color-inset-hover: hsl(200, 20%, 16%);
+    --color-subtle: hsl(200, 20%, 16%);
+    --color-muted: hsl(200, 15%, 16%);
+    --color-backdrop: hsla(0, 0%, 0%, 0.5);
+    --color-backdrop-muted: hsla(0, 0%, 10%, 0.25);
+    --color-disabled: hsl(210, 10%, 43%);
+
+    --color-content: hsl(208, 35%, 93%);
+    --color-content-inset: hsl(208, 35%, 90%);
+    --color-content-muted: hsl(215, 8%, 63%);
+    --color-content-disabled: hsl(215, 8%, 43%);
+    --color-content-primary: hsl(220, 20%, 100%);
+    --color-content-success: hsl(142, 71%, 97%);
+    --color-content-warning: hsl(40, 100%, 7%);
+    --color-content-error: hsl(220, 20%, 100%);
+    --color-content-info: hsl(220, 20%, 100%);
+
+    --color-border: hsl(213, 12%, 30%);
+    --color-border-inset: hsl(213, 12%, 25%);
+    --color-border-muted: hsl(214, 13%, 25%);
+    --color-border-subtle: hsla(210, 32%, 85%, 0.1);
+    --color-border-disabled: hsl(210, 10%, 35%);
+
+    --color-primary: hsl(215, 93%, 58%);
+    --color-primary-hover: hsl(216, 61%, 49%);
+    --color-primary-muted: hsla(215, 93%, 58%, 0.6);
+    --color-primary-subtle: hsla(215, 93%, 58%, 0.3);
+    --color-primary-semitransparent: hsla(215, 93%, 58%, 0.1);
+
+    --color-success: hsl(142, 71%, 35%);
+    --color-success-inset: hsl(142, 71%, 12%);
+    --color-success-hover: hsl(142, 71%, 25%);
+    --color-success-muted: hsla(142, 71%, 35%, 0.4);
+    --color-success-subtle: hsla(142, 71%, 35%, 0.1);
+
+    --color-warning: hsl(40, 100%, 50%);
+    --color-warning-inset: hsl(40, 100%, 12%);
+    --color-warning-hover: hsl(40, 100%, 40%);
+    --color-warning-muted: hsla(40, 100%, 50%, 0.65);
+    --color-warning-subtle: hsla(40, 100%, 50%, 0.2);
+
+    --color-error: hsl(3, 75%, 60%);
+    --color-error-inset: hsl(3, 75%, 12%);
+    --color-error-hover: hsl(3, 75%, 55%);
+    --color-error-muted: hsla(3, 75%, 60%, 0.4);
+    --color-error-subtle: hsla(3, 75%, 60%, 0.1);
+
+    --color-info: hsl(195, 50%, 50%);
+    --color-info-inset: hsl(195, 50%, 12%);
+    --color-info-hover: hsl(195, 50%, 45%);
+    --color-info-muted: hsla(195, 50%, 50%, 0.4);
+    --color-info-subtle: hsla(195, 50%, 50%, 0.2);
+
+    accent-color: var(--color-primary) !important;
+  }
+
+
+  [data-theme="night"],
+  html[data-theme="night"] {
+    color-scheme: dark;
+
+    --color-base: hsl(220, 40%, 13%);
+    --color-inset: hsl(220, 30%, 14%);
+    --color-widget: hsl(225, 40%, 16%);
+    --color-inset-hover: hsl(225, 40%, 18%);
+    --color-subtle: hsl(220, 30%, 19%);
+    --color-muted: hsl(220, 30%, 22%);
+    --color-backdrop: hsla(210, 30%, 15%, 0.6);
+    --color-backdrop-muted: hsla(210, 30%, 15%, 0.3);
+    --color-disabled: hsl(220, 10%, 30%);
+
+    --color-content: hsl(220, 10%, 90%);
+    --color-content-inset: hsl(220, 10%, 90%);
+    --color-content-muted: hsl(220, 20%, 90%);
+    --color-content-subtle: hsl(220, 20%, 95%);
+    --color-content-disabled: hsl(220, 30%, 90%);
+    --color-content-success: hsl(0, 0%, 10%);
+    --color-content-warning: hsl(0, 0%, 10%);
+    --color-content-error: hsl(0, 100%, 99%);
+    --color-content-primary: hsl(0, 0%, 10%);
+
+    --color-border: hsl(210, 30%, 40%);
+    --color-border-inset: hsl(210, 30%, 35%);
+    --color-border-muted: hsla(210, 25%, 30%);
+    --color-border-subtle: hsla(210, 50%, 65%, 0.1);
+    --color-border-disabled: hsl(210, 20%, 55%);
+
+    --color-primary: hsl(55, 90%, 60%);
+    --color-primary-hover: hsl(55, 90%, 55%);
+    --color-primary-muted: hsla(55, 90%, 70%, 0.6);
+    --color-primary-subtle: hsla(55, 100%, 50%, 0.3);
+    --color-primary-semitransparent: hsla(40, 90%, 70%, 0.1);
+
+    --color-success: hsl(142, 71%, 50%);
+    --color-success-hover: hsl(142, 71%, 55%);
+    --color-success-muted: hsla(142, 71%, 50%, 0.4);
+    --color-success-subtle: hsla(142, 71%, 50%, 0.1);
+
+    --color-warning: hsl(37, 90%, 60%);
+    --color-warning-hover: hsl(40, 100%, 70%);
+    --color-warning-muted: hsla(40, 68%, 66%, 0.65);
+    --color-warning-subtle: hsla(40, 68%, 66%, 0.2);
+
+    --color-error: hsl(0, 60%, 60%);
+    --color-error-hover: hsl(3, 75%, 65%);
+    --color-error-muted: hsla(3, 75%, 60%, 0.4);
+    --color-error-subtle: hsla(3, 75%, 60%, 0.1);
+
+    --color-info: hsl(195, 80%, 60%);
+    --color-info-hover: hsl(195, 80%, 65%);
+    --color-info-muted: hsla(195, 80%, 60%, 0.4);
+    --color-info-subtle: hsla(195, 100%, 60%, 0.2);
+
+    accent-color: var(--color-primary) !important;
+  }
+
+
+  [data-theme="coffee"],
+  html[data-theme="coffee"] {
+    color-scheme: dark;
+
+    --color-base: hsl(30, 12%, 16%);
+    --color-inset: hsl(30, 12%, 18%);
+    --color-widget: hsl(30, 12%, 20%);
+    --color-inset-hover: hsl(30, 15%, 22%);
+    --color-subtle: hsl(30, 15%, 24%);
+    --color-muted: hsl(30, 12%, 30%);
+    --color-backdrop: hsla(30, 10%, 5%, 0.8);
+    --color-backdrop-muted: hsla(30, 10%, 5%, 0.4);
+    --color-disabled: hsl(30, 10%, 50%);
+
+    --color-content: hsl(30, 5%, 95%);
+    --color-content-inset: hsl(30, 5%, 95%);
+    --color-content-muted: hsl(30, 5%, 80%);
+    --color-content-subtle: hsl(30, 5%, 75%);
+    --color-content-disabled: hsl(30, 10%, 65%);
+    --color-content-success: hsl(30, 10%, 10%);
+    --color-content-warning: hsl(30, 10%, 10%);
+    --color-content-error: hsl(30, 10%, 10%);
+    --color-content-primary: hsl(30, 10%, 10%);
+
+    --color-border: hsl(30, 20%, 55%);
+    --color-border-inset: hsl(30, 20%, 50%);
+    --color-border-muted: hsla(30, 20%, 52%);
+    --color-border-subtle: hsla(30, 30%, 40%, 0.1);
+    --color-border-disabled: hsl(30, 10%, 75%);
+
+    --color-primary: hsl(35, 100%, 60%);
+    --color-primary-hover: hsl(35, 100%, 65%);
+    --color-primary-muted: hsla(35, 100%, 60%, 0.6);
+    --color-primary-subtle: hsla(35, 100%, 60%, 0.3);
+    --color-primary-semitransparent: hsla(35, 100%, 60%, 0.1);
+
+    --color-success: hsl(90, 40%, 40%);
+    --color-success-hover: hsl(90, 40%, 45%);
+    --color-success-muted: hsla(90, 40%, 40%, 0.4);
+    --color-success-subtle: hsla(90, 40%, 40%, 0.1);
+
+    --color-warning: hsl(40, 70%, 50%);
+    --color-warning-hover: hsl(40, 70%, 55%);
+    --color-warning-muted: hsla(40, 70%, 50%, 0.65);
+    --color-warning-subtle: hsla(40, 70%, 50%, 0.2);
+
+    --color-error: hsl(0, 60%, 60%);
+    --color-error-hover: hsl(3, 75%, 65%);
+    --color-error-muted: hsla(3, 75%, 60%, 0.4);
+    --color-error-subtle: hsla(3, 75%, 60%, 0.1);
+
+    --color-info: hsl(195, 80%, 50%);
+    --color-info-hover: hsl(195, 80%, 55%);
+    --color-info-muted: hsla(195, 80%, 50%, 0.4);
+    --color-info-subtle: hsla(195, 100%, 50%, 0.2);
+
+
+    accent-color: var(--color-primary) !important;
+
+  }

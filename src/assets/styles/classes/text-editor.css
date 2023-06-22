@@ -1,0 +1,53 @@
+.rich-text-editor {
+  overflow: auto;
+  white-space: pre-wrap;
+  background-color: var(--color-canvas-widget);
+  padding: var(--spacing-medium);
+  border-radius: var(--rounded-medium);
+  /* border-width: var(--border-width); */
+  /* color-border: var(--color-border-inactive); */
+  margin-block: var(--spacing-medium);
+  --border-width: 1px;
+  transition: all 0.1s ease-in-out;
+  outline: var(--border-width) solid var(--color-border-inactive);
+}
+
+.rich-text-editor:focus-within {
+  outline: 2px solid var(--color-border-active);
+  --border-width: 2px;
+}
+
+/* Placeholder for text editor */
+/* .rich-text-editor:empty:not(:focus-within)::before,
+.rich-text-editor:empty:not(:focus-within):before,
+.rich-text-editor:focus-within::before,
+.rich-text-editor:before {
+  content: attr(placeholder);
+  color: var(--color-text-muted); 
+}
+*/
+
+.format-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.text-editor-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.text-editor-toolbar {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--color-border-inactive);
+  right: var(--spacing-small);
+  top: var(--spacing-small);
+}
+
+/* max-w-4xl p-2 overflow-auto whitesize-pre-wrap bg-white border rounded */

@@ -1,0 +1,145 @@
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: inherit;
+}
+
+.sticky {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  z-index: 1;
+}
+
+svg {
+  display: inline-block;
+  line-height: 1;
+  vertical-align: middle;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
+.icon-24{
+  width: 24px;
+  height: 24px;
+}
+
+.rotate-90 {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.-rotate-90 {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.rotate-180 {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.transition {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.gap-small {
+  display: flex;
+  gap: var(--spacing-small);
+}
+
+.gap-medium {
+  gap: var(--spacing-medium);
+}
+
+.gap-large {
+  gap: var(--spacing-large);
+}
+
+.flex-row-center {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  align-items: center;
+}
+
+
+.between {
+  justify-content: space-between;
+}
+
+.content-muted {
+  color: var(--color-content-muted);
+}
+
+.grid-cols-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spacing-medium);
+  margin-block: var(--spacing-medium);
+}
+
+.grid-cols-auto {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: var(--spacing-medium);
+  margin-block: var(--spacing-medium);
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.padding-block-large {
+  padding-block: var(--spacing-large);
+}
+
+.padding-block-medium {
+  padding-block: var(--spacing-medium);
+}
+
+.padding-block-small {
+  padding-block: var(--spacing-small);
+}
+
+.padding-inline-large {
+  padding-inline: var(--spacing-large);
+}
+
+.padding-inline-medium {
+  padding-inline: var(--spacing-medium);
+}
+
+.padding-inline-small {
+  padding-inline: var(--spacing-small);
+}
+
+.padding-large {
+  padding: var(--spacing-large);
+}
+
+.padding-medium {
+  padding: var(--spacing-medium);
+}
+
+.padding-small {
+  padding: var(--spacing-small);
+}

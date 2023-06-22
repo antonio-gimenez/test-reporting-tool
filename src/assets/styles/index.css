@@ -1,0 +1,74 @@
+@import url("./reset.css");
+@import url("./globals.css");
+
+/* Global */
+@import url("./fonts.css");
+@import url("./themes.css");
+@import url("./typography.css");
+@import url("./snippets.css");
+
+/* Classes */
+@import url("./classes/alert.css");
+@import url("./classes/badge.css");
+@import url("./classes/breadcrumbs.css");
+@import url("./classes/buttons.css");
+@import url("./classes/card.css");
+@import url("./classes/drawer.css");
+@import url("./classes/dropdown.css");
+@import url("./classes/hero.css");
+@import url("./classes/menu.css");
+@import url("./classes/modal.css");
+@import url("./classes/collapse.css");
+@import url("./classes/pagination.css");
+@import url("./classes/progress.css");
+@import url("./classes/sidebar.css");
+@import url("./classes/forms.css");
+@import url("./classes/navbar.css");
+@import url("./classes/notecard.css");
+@import url("./classes/table.css");
+@import url("./classes/tabs.css");
+@import url("./classes/tags.css");
+
+/* Components */
+@import url("./components/layouts.css");
+@import url("./components/day-selector.css");
+@import url("./components/theme-selector.css");
+@import url('./components/mode.css');
+
+.newline {
+  max-width: 50ch;
+  white-space: pre-line;
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  margin-right: var(--spacing-small);
+  display: inline-block;
+}
+
+.dot-success {
+  background-color: var(--color-success);
+}
+
+.dot-warning {
+  background-color: var(--color-warning);
+}
+
+.dot-error {
+  background-color: var(--color-error);
+}
+
+.dot-info {
+  background-color: var(--color-info);
+}
+
+.dot-primary-muted {
+  background-color: var(--color-primary-muted);
+}
+
+.dot-pending {
+  background-color: var(--color-muted);
+  box-shadow: inset 0 0 0 1px var(--color-border);
+}

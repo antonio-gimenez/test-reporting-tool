@@ -1,0 +1,86 @@
+html {
+  --font-family: "Fira Sans", sans-serif;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Non-Fluid scale sizes */
+  --font-size-smaller: 11px;
+  --font-size-small: 12px;
+  --font-size-base: 14px;
+  --font-size-medium: 17px;
+  --font-size-large: 19px;
+
+  --header-height: 64px;
+
+  --icon-size-mini: 12px;
+  --icon-size-small: 16px;
+  --icon-size-base: 24px;
+
+  --max-page-width: 1440px;
+
+  
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --font-size-smaller: 13px;
+    --font-size-small: 15px;
+    --font-size-base: 16px;
+    --font-size-medium: 18px;
+    --font-size-large: 20px;
+  }
+}
+
+[aria-disabled="true"],
+:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* scrollbar-width: thin !important; */
+  scroll-behavior: smooth;
+  line-height: 21px;
+}
+
+html {
+  padding: 0 !important;
+}
+
+
+.page-responsive {
+  min-height: 100vh;
+  max-width: 100%;
+  color: var(--color-content);
+  background-color: var(--color-base);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular, 400);
+}
+
+.application-main {
+  min-height: 100vh;
+  display: flex;
+  min-height: calc(100vh - var(--header-height));
+  flex-direction: column;
+  /* padding-inline: var(--spacing-medium); */
+  padding: calc(var(--header-height) / 2);
+  max-width: var(--max-page-width);
+  margin: 0 auto;
+  overflow-anchor: none;
+}
+
+
+.capitalize {
+  text-transform: capitalize;
+}

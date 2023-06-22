@@ -1,0 +1,98 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  inset: 0;
+  /* Setting the width and height to 100vw and 100vh will make the backdrop appear full screen on the current viewport. */
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-backdrop);
+  scroll-padding-top: var(--header-height);
+  z-index: 1;
+  /* The overlay should be above the other elements on the page. */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+dialog {
+  border: 2px solid transparent;
+  z-index: 2;
+}
+
+.modal {
+  position: relative;
+  width: auto;
+  height: auto;
+  min-width: 300px;
+  max-width: 99vw;
+  max-height: 99vh;
+  background-color: var(--color-base);
+  color: var(--color-content);
+  border: var(--border-width) solid var(--color-border-muted);
+  box-shadow: var(--overlay-shadow);
+  border-radius: var(--rounded-large);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.modal-header-wrapper {
+  background-color: var(--color-base);
+  box-shadow: 0 1px 0 var(--color-border-subtle);
+  padding: var(--spacing-medium);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-header-title {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: var(--spacing-medium);
+  padding: 0 var(--spacing-small);
+  font-weight: var(--font-weight-medium);
+}
+
+.modal-header-action {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+}
+
+.modal-body {
+  position: relative;
+  min-width: 100px;
+  min-height: 50px;
+  padding: var(--spacing-large);
+  flex-grow: 1;
+  overflow: auto;
+}
+
+/*
+ if modal-body has scroll bar,
+the modal-body width will be reduced by the width of the scrollbar.
+*/
+modal-body::-webkit-scrollbar {
+  width: 12px;
+}
+
+.modal-footer {
+  min-width: -webkit-min-content;
+  min-width: -moz-min-content;
+  min-width: min-content;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--spacing-medium);
+  bottom: 0;
+  background-color: var(--color-base);
+  padding: var(--spacing-medium);
+  margin: var(--spacing-medium) 0;
+  border-top: 1px solid var(--color-border);
+}

@@ -1,0 +1,18 @@
+.day-selector {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-medium);
+  width: 100%;
+  height: 100%;
+  padding: var(--spacing-medium);
+  border-radius: var(--rounded-large);
+  background-color: var(--color-canvas-panel);
+  cursor: pointer;
+}
+
+.day-selector-date {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-medium);
+}

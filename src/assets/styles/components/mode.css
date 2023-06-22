@@ -1,0 +1,97 @@
+.hide-checkbox {
+    display: none;
+}
+
+.mode-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+}
+
+.window {
+    width: 300px;
+    height: 150px;
+    background-color: var(--color-inset);
+    border: 1px solid var(--color-border-subtle);
+    overflow: hidden;
+    border-radius: var(--rounded-medium);
+    box-shadow: 0 2px 4px var(--color-backdrop-muted);
+    color: var(--color-content);
+    position: relative;
+    z-index: auto;
+    cursor: pointer;
+}
+
+
+.window[aria-checked="true"] {
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+    -webkit-filter: drop-shadow(0 0 0.75rem var(--color-primary-semitransparent));
+            filter: drop-shadow(0 0 0.75rem var(--color-primary-semitransparent));
+    box-shadow: 0 4px 8px var(--color-primary-semitransparent), 0 0 0 2px var(--color-primary);
+}
+
+.window[aria-checked="false"]:hover {
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+}
+
+.window-header {
+    background-color: var(--color-inset-hover);
+    padding: var(--spacing-medium);
+    border-bottom: 1px solid var(--color-border-subtle);
+    display: flex;
+    align-items: center;
+}
+
+.window-title {
+    flex-grow: 1;
+    font-weight: var(--font-weight-medium);
+}
+
+.window-controls {
+    display: flex;
+}
+
+.window-controls button {
+    width: var(--spacing-medium);
+    height: var(--spacing-medium);
+    margin-left: var(--spacing-small);
+    border-radius: var(--rounded-circle);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.window-minimize {
+    background-color: var(--color-warning);
+}
+
+.window-maximize {
+    background-color: #00cc66;
+}
+
+.window-close {
+    background-color: #ff6666;
+}
+
+.window-content {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    font-size: var(--font-size-small);
+}
+
+/* make a gradient of dark/light at half */
+.window-content.sync::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, var(--color-base) 50%, var(--color-content) 50%);
+    opacity: 0.5;
+}

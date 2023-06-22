@@ -1,0 +1,19 @@
+.notecard {
+  border-radius: var(--spacing-medium);
+  margin-block: var(--spacing-large);
+  overflow: hidden;
+  position: relative;
+  font-size: 12px;
+  padding: var(--spacing-medium);
+  outline: 2px solid transparent;
+  color: var(--color-primary) !important;
+  outline: var(--border-width) solid var(--color-primary-muted);
+  background-color: var(--color-primary-semitransparent);
+}
+
+.notecard > * {
+ color: var(--color-primary) !important;
+}
+.margin-block {
+  margin-block: var(--spacing-large);
+}
